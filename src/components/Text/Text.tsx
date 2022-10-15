@@ -4,11 +4,12 @@ import { ReactNode } from "react";
 
 export interface ITextProps {
   size?: 'sm' | 'md' | 'lg';
+  className?: string;
   children: ReactNode;
   asChild?: boolean;
 }
 
-export function Text({ size = 'md', children, asChild }: ITextProps) {
+export function Text({ size = 'md', className, children, asChild }: ITextProps) {
   const Comp = asChild ? Slot : 'span';
 
   return (
@@ -20,7 +21,8 @@ export function Text({ size = 'md', children, asChild }: ITextProps) {
             "text-xs": size === 'sm',
             'text-sm': size === 'md',
             "text-md": size === 'lg',
-          }
+          },
+          className
         )
       }
     >

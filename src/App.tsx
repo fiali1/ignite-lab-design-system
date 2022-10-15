@@ -1,15 +1,20 @@
-import { useState } from 'react'
-import './styles/global.css';
+import { useState } from "react";
+import { Heading } from "./components/Heading/Heading";
+import { Text } from "./components/Text/Text";
+import { TextInput } from "./components/TextInput/TextInput";
+
+import { Envelope, Lock } from "phosphor-react";
+import Logo from "./Logo";
+
+import "./styles/global.css";
+import { Checkbox } from "./components/Checkbox/Checkbox";
+import { Button } from "./components/Button/Button";
+import { SignIn } from "./pages/SignIn";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
-  return (
-    <>
-      <h1 className="font-bold text-5xl text-violet-500">Hello world</h1>
-      <button className='bg-cyan-500 font-medium px-4 py-2 rounded text-white hover:bg-violet-600'>Enviar</button>
-    </>
-  )
+  return <SignIn />;
 }
 
-export default App
+export default App;
